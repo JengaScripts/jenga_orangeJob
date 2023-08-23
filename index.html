@@ -1,0 +1,127 @@
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jenga OrangeJob</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <style>
+        body {
+            background: radial-gradient(50% 50% at 50% 50%, rgba(22, 21, 35, 0) 0%, rgba(22, 21, 35, .80) 100%);
+            background-color: rgba(22, 21, 35, .80);
+            display: none;
+			overflow:  hidden;
+			-webkit-animation: fadeInFromNone 1s ease-out;
+			-moz-animation: fadeInFromNone 1s ease-out;
+			-o-animation: fadeInFromNone 1s ease-out;
+			animation: fadeInFromNone 1s ease-out;
+        }
+
+        .orange {
+            background: url(../assets/img/orange.png);
+            background-size: 100% 100%;
+            width: 150px;
+            height: 150px;
+        }
+
+        #spawnZone {
+            margin-right: 0;
+            background: url(../assets/img/wood.png) no-repeat ;
+            background-size: 1024px, 687px;
+            height: 100%;
+        }
+        .dropme {
+            position: absolute;
+            right: 5%;
+            bottom: 2%;
+            color: #ffffff;
+            text-align: center;
+        }
+        #zone {
+            background: url("../assets/img/basket.png");
+            background-size: 100% 100%;
+            width: 684px;
+            height: 638px;
+			margin-bottom: -30px;
+			position: absolute;
+			right: 100px;
+        }
+        @-webkit-keyframes fadeInFromNone {
+            0% {
+                display: none;
+                opacity: 0;
+            }
+
+            1% {
+                display: block;
+                opacity: 0;
+            }
+
+            100% {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadeInFromNone {
+            0% {
+                display: none;
+                opacity: 0;
+            }
+
+            1% {
+                display: block;
+                opacity: 0;
+            }
+
+            100% {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes fadeInFromNone {
+            0% {
+                display: none;
+                opacity: 0;
+            }
+
+            1% {
+                display: block;
+                opacity: 0;
+            }
+
+            100% {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInFromNone {
+            0% {
+                display: none;
+                opacity: 0;
+            }
+
+            1% {
+                display: block;
+                opacity: 0;
+            }
+
+            100% {
+                display: block;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app" v-if="nui">
+        <div class="dropme" id="zone"></div>
+        <div id="spawnZone"></div>
+    </div>
+    <script src="./vue.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>
