@@ -47,7 +47,7 @@ CreateThread(function()
 			if distance < 2 then
 				DrawText3D(Config.OrangeJuice.x, Config.OrangeJuice.y, Config.OrangeJuice.z, Config.Lang.converttojuice)
 				if IsControlJustPressed(0, 38) then
-                    TriggerEvent("jenga_orangejob:server:orangeJuice")
+                    TriggerServerEvent("jenga_orangejob:server:orangeJuice")
 				end
 			end
 		end
